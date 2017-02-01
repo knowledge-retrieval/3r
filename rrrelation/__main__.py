@@ -2,31 +2,17 @@
 # -*- coding: utf-8 -*-
 
 import os
+import argparse
 import requests
 
-import application
+import rrrelation.app
+from rrrelation.es.rrrelation_manager import SentenceManager
+
 
 if __name__ == "__main__":
-    # Check NER API Server
-    ner_endpoint = os.getenv("NER_API_URL")
-
-    headers = {"Content-type": "application/json"}
-    res = requests.get(ner_endpoint + "/ner", headers=headers)
-
-    if res.status_code != 200:
-        raise Exception("Somthing wrong with %s" % ner_endpoint)
-
-    res_json = res.json()
-
-    status = res_json.get("status", None)
-
-    if not status:
-        raise Exception("Not satisfied NER API server")
-
-    if status != "available":
-        raise Exception("NER API Server is not available")
-
-    print "NER API ENDPOINT : %s" % ner_endpoint
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--init", type=bool, default=False)
+    args = parser.parse_args()
 
     # Check Elasticsearch
     es_endpoint = os.getenv("ELASTICSEARCH_URL")
@@ -41,4 +27,36 @@ if __name__ == "__main__":
 
     print "Elasticsearch(%s) ENDPOINT : %s" % (es_version, es_endpoint)
 
-    application.run()
+    if args.init:
+
+        print "Initializing ..."
+        sentence_manager = SentenceManager(os.getenv("ELASTICSEARCH_URL"))
+        sentence_manager.delete_index()
+        sentence_manager.create_index()
+        sentence_manager.put_mapping()
+        print "done"
+
+    else:
+
+        # Check NER API Server
+        ner_endpoint = os.getenv("NER_API_URL")
+
+        headers = {"Content-type": "application/json"}
+        res = requests.get(ner_endpoint + "/ner", headers=headers)
+
+        if res.status_code != 200:
+            raise Exception("Somthing wrong with %s" % ner_endpoint)
+
+        res_json = res.json()
+
+        status = res_json.get("status", None)
+
+        if not status:
+            raise Exception("Not satisfied NER API server")
+
+        if status != "available":
+            raise Exception("NER API Server is not available")
+
+        print "NER API ENDPOINT : %s" % ner_endpoint
+
+        rrrelation.app.run()
