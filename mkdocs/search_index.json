@@ -2,23 +2,23 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Knowledge Retrieval is \u3068\u306f\u4f55\u304b\u3002\uff12\u6587\u304f\u3089\u3044\u3067\u3002\n\n\nAbout Knowledge Retrieval\n\n\n\u3069\u3093\u306a\u30c4\u30fc\u30eb\u306a\u306e\u304b\uff11\u6bb5\u843d\u304f\u3089\u3044\u3002\n\n\nKnowledge Retrieval features\n\n\n\u3069\u3053\u304c\u4ed6\u306b\u306a\u3044\u70b9\u306a\u306e\u304b\u3002\n\n\nWho can use Knowledge Retrieval\n\n\n\u3069\u3093\u306a\u4eba\u304c\u4f7f\u3063\u305f\u3089\u3044\u3044\u304b\u3002\n\n\nLicence\n\n\nMIT\n\n\nAuthor\n\n\n\n\nSosuke Kato\n\n\nKenta Tamaki", 
+            "text": "relretrieval is \u3068\u306f\u4f55\u304b\u3002\uff12\u6587\u304f\u3089\u3044\u3067\u3002\n\n\nAbout relretrieval\n\n\n\u3069\u3093\u306a\u30c4\u30fc\u30eb\u306a\u306e\u304b\uff11\u6bb5\u843d\u304f\u3089\u3044\u3002\n\n\nrelretrieval features\n\n\n\u3069\u3053\u304c\u4ed6\u306b\u306a\u3044\u70b9\u306a\u306e\u304b\u3002\n\n\nWho can use relretrieval\n\n\n\u3069\u3093\u306a\u4eba\u304c\u4f7f\u3063\u305f\u3089\u3044\u3044\u304b\u3002\n\n\nLicence\n\n\nMIT\n\n\nAuthor\n\n\n\n\nSosuke Kato\n\n\nKenta Tamaki", 
             "title": "Home"
         }, 
         {
-            "location": "/#about-knowledge-retrieval", 
+            "location": "/#about-relretrieval", 
             "text": "\u3069\u3093\u306a\u30c4\u30fc\u30eb\u306a\u306e\u304b\uff11\u6bb5\u843d\u304f\u3089\u3044\u3002", 
-            "title": "About Knowledge Retrieval"
+            "title": "About relretrieval"
         }, 
         {
-            "location": "/#knowledge-retrieval-features", 
+            "location": "/#relretrieval-features", 
             "text": "\u3069\u3053\u304c\u4ed6\u306b\u306a\u3044\u70b9\u306a\u306e\u304b\u3002", 
-            "title": "Knowledge Retrieval features"
+            "title": "relretrieval features"
         }, 
         {
-            "location": "/#who-can-use-knowledge-retrieval", 
+            "location": "/#who-can-use-relretrieval", 
             "text": "\u3069\u3093\u306a\u4eba\u304c\u4f7f\u3063\u305f\u3089\u3044\u3044\u304b\u3002", 
-            "title": "Who can use Knowledge Retrieval"
+            "title": "Who can use relretrieval"
         }, 
         {
             "location": "/#licence", 
@@ -167,13 +167,13 @@
         }, 
         {
             "location": "/versions/", 
-            "text": "Versions of Knowledge Retrieval\n\n\nThese branches are available on this site.\n\n\n\n\nv0.1.0", 
+            "text": "Versions of relretrieval\n\n\nThese branches are available on this site.\n\n\n\n\nv0.0.1", 
             "title": "Versions"
         }, 
         {
-            "location": "/versions/#versions-of-knowledge-retrieval", 
-            "text": "These branches are available on this site.   v0.1.0", 
-            "title": "Versions of Knowledge Retrieval"
+            "location": "/versions/#versions-of-relretrieval", 
+            "text": "These branches are available on this site.   v0.0.1", 
+            "title": "Versions of relretrieval"
         }
     ]
 }
