@@ -9,8 +9,7 @@ except ImportError:
 
 DISTNAME = "relretrieval"
 DESCRIPTION = "A set of python modules to retrieve related relationships"
-# with open("README.rst") as f:
-#     LONG_DESCRIPTION = f.read()
+LONG_DESCRIPTION = open("README.rst").read()
 AUTHOR = "Sosuke Kato"
 AUTHOR_EMAIL = "snoopies.drum@gmail.com"
 URL = "https://github.com/knowledge-retrieval/3r"
@@ -22,14 +21,10 @@ PACKAGE_DIR = {
     "relretrieval.es": "relretrieval/es",
     "relretrieval.ner": "relretrieval/ner",
 }
+DEPENDENCIES = open("requirements.txt").read().splitlines()
 
 import relretrieval
 VERSION = relretrieval.__version__
-
-DEPENDENCIES = [
-    "Flask==0.12",
-    "requests==2.9.1",
-]
 
 
 def setup_package():
