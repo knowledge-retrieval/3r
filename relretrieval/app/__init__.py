@@ -7,8 +7,8 @@ app = Flask(__name__)
 
 setattr(app, "is_training", False)
 
-from rrrelation.ner.tagger import NERTagger
-from rrrelation.es.rrrelation_manager import SentenceManager
+from relretrieval.ner.tagger import NERTagger
+from relretrieval.es.relretrieval_manager import SentenceManager
 
 
 @app.route("/")

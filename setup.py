@@ -7,7 +7,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-DISTNAME = "rrrelation"
+DISTNAME = "relretrieval"
 DESCRIPTION = "A set of python modules to retrieve related relationships"
 # with open("README.rst") as f:
 #     LONG_DESCRIPTION = f.read()
@@ -15,16 +15,16 @@ AUTHOR = "Sosuke Kato"
 AUTHOR_EMAIL = "snoopies.drum@gmail.com"
 URL = "https://github.com/knowledge-retrieval/3r"
 LICENSE = "MIT"
-PACKAGES = ["rrrelation", "rrrelation.app", "rrrelation.es", "rrrelation.ner"]
+PACKAGES = ["relretrieval", "relretrieval.app", "relretrieval.es", "relretrieval.ner"]
 PACKAGE_DIR = {
-    "rrrelation": "rrrelation",
-    "rrrelation.app": "rrrelation/app",
-    "rrrelation.es": "rrrelation/es",
-    "rrrelation.ner": "rrrelation/ner",
+    "relretrieval": "relretrieval",
+    "relretrieval.app": "relretrieval/app",
+    "relretrieval.es": "relretrieval/es",
+    "relretrieval.ner": "relretrieval/ner",
 }
 
-import rrrelation
-VERSION = rrrelation.__version__
+import relretrieval
+VERSION = relretrieval.__version__
 
 DEPENDENCIES = [
     "Flask==0.12",

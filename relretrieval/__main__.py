@@ -5,8 +5,8 @@ import os
 import argparse
 import requests
 
-import rrrelation.app
-from rrrelation.es.rrrelation_manager import SentenceManager
+import relretrieval.app
+from relretrieval.es.relretrieval_manager import SentenceManager
 
 
 if __name__ == "__main__":
@@ -59,4 +59,4 @@ if __name__ == "__main__":
 
         print "NER API ENDPOINT : %s" % ner_endpoint
 
-        rrrelation.app.run()
+        relretrieval.app.run()
