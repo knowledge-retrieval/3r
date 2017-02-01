@@ -14,12 +14,17 @@ AUTHOR = "Sosuke Kato"
 AUTHOR_EMAIL = "snoopies.drum@gmail.com"
 URL = "https://github.com/knowledge-retrieval/relretrieval"
 LICENSE = "MIT"
-PACKAGES = ["relretrieval", "relretrieval.app", "relretrieval.es", "relretrieval.ner"]
+PACKAGES = ["relretrieval",
+            "relretrieval.app",
+            "relretrieval.es",
+            "relretrieval.ner",
+            "relretrieval.BREDS"]
 PACKAGE_DIR = {
     "relretrieval": "relretrieval",
     "relretrieval.app": "relretrieval/app",
     "relretrieval.es": "relretrieval/es",
     "relretrieval.ner": "relretrieval/ner",
+    "relretrieval.BREDS": "relretrieval/BREDS",
 }
 DEPENDENCIES = open("requirements.txt").read().splitlines()
 
