@@ -1,0 +1,179 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Knowledge Retrieval is \u3068\u306f\u4f55\u304b\u3002\uff12\u6587\u304f\u3089\u3044\u3067\u3002\n\n\nAbout Knowledge Retrieval\n\n\n\u3069\u3093\u306a\u30c4\u30fc\u30eb\u306a\u306e\u304b\uff11\u6bb5\u843d\u304f\u3089\u3044\u3002\n\n\nKnowledge Retrieval features\n\n\n\u3069\u3053\u304c\u4ed6\u306b\u306a\u3044\u70b9\u306a\u306e\u304b\u3002\n\n\nWho can use Knowledge Retrieval\n\n\n\u3069\u3093\u306a\u4eba\u304c\u4f7f\u3063\u305f\u3089\u3044\u3044\u304b\u3002\n\n\nLicence\n\n\nMIT\n\n\nAuthor\n\n\n\n\nSosuke Kato\n\n\nKenta Tamaki", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#about-knowledge-retrieval", 
+            "text": "\u3069\u3093\u306a\u30c4\u30fc\u30eb\u306a\u306e\u304b\uff11\u6bb5\u843d\u304f\u3089\u3044\u3002", 
+            "title": "About Knowledge Retrieval"
+        }, 
+        {
+            "location": "/#knowledge-retrieval-features", 
+            "text": "\u3069\u3053\u304c\u4ed6\u306b\u306a\u3044\u70b9\u306a\u306e\u304b\u3002", 
+            "title": "Knowledge Retrieval features"
+        }, 
+        {
+            "location": "/#who-can-use-knowledge-retrieval", 
+            "text": "\u3069\u3093\u306a\u4eba\u304c\u4f7f\u3063\u305f\u3089\u3044\u3044\u304b\u3002", 
+            "title": "Who can use Knowledge Retrieval"
+        }, 
+        {
+            "location": "/#licence", 
+            "text": "MIT", 
+            "title": "Licence"
+        }, 
+        {
+            "location": "/#author", 
+            "text": "Sosuke Kato  Kenta Tamaki", 
+            "title": "Author"
+        }, 
+        {
+            "location": "/get_started/", 
+            "text": "Introduction\n\n\n\u672c\u30b7\u30b9\u30c6\u30e0 (\nrelretrieval\n) \u3068\u5fc5\u8981\u3068\u306a\u308b\u95a2\u9023\u30b7\u30b9\u30c6\u30e0 (\nElasticsearch\n\u3001\nNER API Server\n) \u3001\u53ca\u3073\u305d\u308c\u3089\u3092\u5229\u7528\u3059\u308b\n\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\n\u306e\u95a2\u4fc2\u3092\u793a\u3057\u307e\u3059\u3002\n\n\n\n  \n\n\n\n\n\u56f3\u306b\u793a\u3059\u3088\u3046\u306b\u672c\u30b7\u30b9\u30c6\u30e0\u306f\u3001\u30d0\u30c3\u30af\u30a8\u30f3\u30c9\u3067\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u3092\u3059\u308b\u305f\u3081\u306e\u30b5\u30fc\u30d0\u30fc\u3068\u3001\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066Elasticsearch\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\n\n\nDownload and Setup\n\n\nElasticsearch\n\n\n\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066\nElasticsearch\n\u3092\u5229\u7528\u3057\u307e\u3059\u3002\n\u3059\u3067\u306b\u305f\u3063\u3066\u3044\u308b\u5834\u5408\u306f\u5fc5\u8981\u3042\u308a\u307e\u305b\u3093\u304c\u3001\u4ee5\u4e0b\u306e\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u540d\u53ca\u3073\u30d7\u30e9\u30b0\u30a4\u30f3\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\n\n\n\n\n\u30a4\u30f3\u30c7\u30c3\u30af\u30b9 : \nrelretrieval\n\n\n\u30d7\u30e9\u30b0\u30a4\u30f3 : \nlang-javascript\n\n\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b\n\n\n$ mkdir ./data\n$ wget -P ./data/ https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip\n$ unzip -d ./data/ ./data/elasticsearch-2.3.4.zip\n$ echo \nscript.inline: true\n \n ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ echo \nscript.indexed: true\n \n ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ ./data/elasticsearch-2.3.4/bin/plugin install lang-javascript\n$ ./data/elasticsearch-2.3.4/bin/elasticsearch\n...\n\n\n\n\nNER API Server\n\n\n\u672c\u30b7\u30b9\u30c6\u30e0\u3067\u306f\u56fa\u6709\u8868\u73fe\u3092\u5916\u90e8\u306eAPI\u3092\u7528\u3044\u3066\u62bd\u51fa\u3092\u884c\u3046\u3053\u3068\u3067\u3001\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u306b\u7528\u3044\u308b\u30c4\u30fc\u30eb\u306e\u5909\u66f4\u3092\u5bb9\u6613\u306b\u3057\u3066\u3044\u307e\u3059\u3002\n\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u7528\u306eAPI\u304c\u6e80\u305f\u3059\u3079\u304d\u4ed5\u69d8\u306b\u3064\u3044\u3066\u306f\n\u3053\u3061\u3089\n\u3002\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b\n\n\n\u4e0a\u8a18\u306eAPI\u4ed5\u69d8\u3092\u6e80\u305f\u3059\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc (\nPlay NER Server\n) \u3092\u672c\u30b7\u30b9\u30c6\u30e0\u3068\u306f\u5225\u306b\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002\n\nPlay NER Server\n \u306e\u4f7f\u7528\u306b\u306f \nactivator\n \u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u304c\u5fc5\u8981\u3067\u3059\u3002\n\n\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n$ git clone https://github.com/sosuke-k/ner-play-server\n\n\n\n\nCRF \u30e2\u30c7\u30eb\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n$ cd ner-play-server\n$ wget -P ./data/ http://nlp.stanford.edu/software/stanford-ner-2015-12-09.zip\n$ unzip -d ./data/ ./data/stanford-ner-2015-12-09.zip\n$ cp -r ./data/stanford-ner-2015-12-09/classifiers/ ./apps/play/public/classifiers/\n\n\n\n\nPlay NER Server \u306e\u8d77\u52d5\n\n\n\u6700\u521d\u306fCRF\u30e2\u30c7\u30eb\u306e\u8aad\u307f\u8fbc\u307f\u306b\u5c11\u3057\u6642\u9593\u304c\u304b\u304b\u308a\u307e\u3059\u3002\n\n\n$ cd apps/play\n$ ./bin/activator run\n...\n--- (Running the application, auto-reloading is enabled) ---\n\n[info] p.c.s.NettyServer - Listening for HTTP on /0:0:0:0:0:0:0:0:9000\n\n(Server started, use Ctrl+D to stop and go back to the console...)\n\n\n\n\nrelretrieval\n\n\n\u74b0\u5883\u5909\u6570\u306e\u8ffd\u52a0\n\n\n\n\nELASTICSEARCH_URL\n : Elasticsearch \u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\n\n\nNER_API_URL\n : \u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc\u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\n\n\n\n\n\u74b0\u5883\u5909\u6570\u306e\u8a2d\u5b9a\u4f8b\uff1a\n\n\nexport ELASTICSEARCH_URL \nhttp://localhost:9200\n\nexport NER_API_URL \nhttp://localhost:9000\n\n\n\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\n\n\npip install relretrieval\n\n\n\n\n\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u306e\u521d\u671f\u5316\n\n\n$ python -m relretrieval --init True\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nInitializing ...\ndone\n\n\n\n\n\u8d77\u52d5\n\n\n$ python -m relretrieval\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nNER API ENDPOINT : http://localhost:9000\n * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)\n...\n\n\n\n\n\u7c21\u5358\u306a\u4f7f\u3044\u65b9\n\n\n\u6587\u3092\u4fdd\u5b58\n\n\narticle_id=1\n \u3067 \nI live in Japan.\n \u3092\u4fdd\u5b58\u3059\u308b\u4f8b\u3067\u3059\u3002\n\n\n$ curl --header \nContent-type: application/json\n --request POST --data '{\narticle_id\n: 1, \ntext\n:\nI live in Japan.\n}' http://localhost:5000/docs -s | jq\n{\n  \nstatus\n: \nok\n\n}", 
+            "title": "Get Started"
+        }, 
+        {
+            "location": "/get_started/#introduction", 
+            "text": "\u672c\u30b7\u30b9\u30c6\u30e0 ( relretrieval ) \u3068\u5fc5\u8981\u3068\u306a\u308b\u95a2\u9023\u30b7\u30b9\u30c6\u30e0 ( Elasticsearch \u3001 NER API Server ) \u3001\u53ca\u3073\u305d\u308c\u3089\u3092\u5229\u7528\u3059\u308b \u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3 \u306e\u95a2\u4fc2\u3092\u793a\u3057\u307e\u3059\u3002  \n     \u56f3\u306b\u793a\u3059\u3088\u3046\u306b\u672c\u30b7\u30b9\u30c6\u30e0\u306f\u3001\u30d0\u30c3\u30af\u30a8\u30f3\u30c9\u3067\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u3092\u3059\u308b\u305f\u3081\u306e\u30b5\u30fc\u30d0\u30fc\u3068\u3001\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066Elasticsearch\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002", 
+            "title": "Introduction"
+        }, 
+        {
+            "location": "/get_started/#download-and-setup", 
+            "text": "", 
+            "title": "Download and Setup"
+        }, 
+        {
+            "location": "/get_started/#elasticsearch", 
+            "text": "\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066 Elasticsearch \u3092\u5229\u7528\u3057\u307e\u3059\u3002\n\u3059\u3067\u306b\u305f\u3063\u3066\u3044\u308b\u5834\u5408\u306f\u5fc5\u8981\u3042\u308a\u307e\u305b\u3093\u304c\u3001\u4ee5\u4e0b\u306e\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u540d\u53ca\u3073\u30d7\u30e9\u30b0\u30a4\u30f3\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002   \u30a4\u30f3\u30c7\u30c3\u30af\u30b9 :  relretrieval  \u30d7\u30e9\u30b0\u30a4\u30f3 :  lang-javascript", 
+            "title": "Elasticsearch"
+        }, 
+        {
+            "location": "/get_started/#_1", 
+            "text": "$ mkdir ./data\n$ wget -P ./data/ https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip\n$ unzip -d ./data/ ./data/elasticsearch-2.3.4.zip\n$ echo  script.inline: true    ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ echo  script.indexed: true    ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ ./data/elasticsearch-2.3.4/bin/plugin install lang-javascript\n$ ./data/elasticsearch-2.3.4/bin/elasticsearch\n...", 
+            "title": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b"
+        }, 
+        {
+            "location": "/get_started/#ner-api-server", 
+            "text": "\u672c\u30b7\u30b9\u30c6\u30e0\u3067\u306f\u56fa\u6709\u8868\u73fe\u3092\u5916\u90e8\u306eAPI\u3092\u7528\u3044\u3066\u62bd\u51fa\u3092\u884c\u3046\u3053\u3068\u3067\u3001\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u306b\u7528\u3044\u308b\u30c4\u30fc\u30eb\u306e\u5909\u66f4\u3092\u5bb9\u6613\u306b\u3057\u3066\u3044\u307e\u3059\u3002\n\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u7528\u306eAPI\u304c\u6e80\u305f\u3059\u3079\u304d\u4ed5\u69d8\u306b\u3064\u3044\u3066\u306f \u3053\u3061\u3089 \u3002", 
+            "title": "NER API Server"
+        }, 
+        {
+            "location": "/get_started/#_2", 
+            "text": "\u4e0a\u8a18\u306eAPI\u4ed5\u69d8\u3092\u6e80\u305f\u3059\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc ( Play NER Server ) \u3092\u672c\u30b7\u30b9\u30c6\u30e0\u3068\u306f\u5225\u306b\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002 Play NER Server  \u306e\u4f7f\u7528\u306b\u306f  activator  \u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u304c\u5fc5\u8981\u3067\u3059\u3002", 
+            "title": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b"
+        }, 
+        {
+            "location": "/get_started/#_3", 
+            "text": "$ git clone https://github.com/sosuke-k/ner-play-server", 
+            "title": "\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9"
+        }, 
+        {
+            "location": "/get_started/#crf", 
+            "text": "$ cd ner-play-server\n$ wget -P ./data/ http://nlp.stanford.edu/software/stanford-ner-2015-12-09.zip\n$ unzip -d ./data/ ./data/stanford-ner-2015-12-09.zip\n$ cp -r ./data/stanford-ner-2015-12-09/classifiers/ ./apps/play/public/classifiers/", 
+            "title": "CRF \u30e2\u30c7\u30eb\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9"
+        }, 
+        {
+            "location": "/get_started/#play-ner-server", 
+            "text": "\u6700\u521d\u306fCRF\u30e2\u30c7\u30eb\u306e\u8aad\u307f\u8fbc\u307f\u306b\u5c11\u3057\u6642\u9593\u304c\u304b\u304b\u308a\u307e\u3059\u3002  $ cd apps/play\n$ ./bin/activator run\n...\n--- (Running the application, auto-reloading is enabled) ---\n\n[info] p.c.s.NettyServer - Listening for HTTP on /0:0:0:0:0:0:0:0:9000\n\n(Server started, use Ctrl+D to stop and go back to the console...)", 
+            "title": "Play NER Server \u306e\u8d77\u52d5"
+        }, 
+        {
+            "location": "/get_started/#relretrieval", 
+            "text": "", 
+            "title": "relretrieval"
+        }, 
+        {
+            "location": "/get_started/#_4", 
+            "text": "ELASTICSEARCH_URL  : Elasticsearch \u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8  NER_API_URL  : \u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc\u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8   \u74b0\u5883\u5909\u6570\u306e\u8a2d\u5b9a\u4f8b\uff1a  export ELASTICSEARCH_URL  http://localhost:9200 \nexport NER_API_URL  http://localhost:9000", 
+            "title": "\u74b0\u5883\u5909\u6570\u306e\u8ffd\u52a0"
+        }, 
+        {
+            "location": "/get_started/#_5", 
+            "text": "pip install relretrieval", 
+            "title": "\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb"
+        }, 
+        {
+            "location": "/get_started/#_6", 
+            "text": "$ python -m relretrieval --init True\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nInitializing ...\ndone", 
+            "title": "\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u306e\u521d\u671f\u5316"
+        }, 
+        {
+            "location": "/get_started/#_7", 
+            "text": "$ python -m relretrieval\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nNER API ENDPOINT : http://localhost:9000\n * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)\n...", 
+            "title": "\u8d77\u52d5"
+        }, 
+        {
+            "location": "/get_started/#_8", 
+            "text": "", 
+            "title": "\u7c21\u5358\u306a\u4f7f\u3044\u65b9"
+        }, 
+        {
+            "location": "/get_started/#_9", 
+            "text": "article_id=1  \u3067  I live in Japan.  \u3092\u4fdd\u5b58\u3059\u308b\u4f8b\u3067\u3059\u3002  $ curl --header  Content-type: application/json  --request POST --data '{ article_id : 1,  text : I live in Japan. }' http://localhost:5000/docs -s | jq\n{\n   status :  ok \n}", 
+            "title": "\u6587\u3092\u4fdd\u5b58"
+        }, 
+        {
+            "location": "/guides/", 
+            "text": "Tutorials\n\n\n\n\n\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11\n\n\n\n\n\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11\n\n\n\u5177\u4f53\u7684\u306b\u30c7\u30fc\u30bf\u3092\u4f7f\u3063\u305f\u30cf\u30f3\u30ba\u30aa\u30f3", 
+            "title": "Guides"
+        }, 
+        {
+            "location": "/guides/#tutorials", 
+            "text": "\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11", 
+            "title": "Tutorials"
+        }, 
+        {
+            "location": "/guides/#1", 
+            "text": "\u5177\u4f53\u7684\u306b\u30c7\u30fc\u30bf\u3092\u4f7f\u3063\u305f\u30cf\u30f3\u30ba\u30aa\u30f3", 
+            "title": "\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11"
+        }, 
+        {
+            "location": "/api/v0.0.1/", 
+            "text": "API References", 
+            "title": "3R API \u4ed5\u69d8"
+        }, 
+        {
+            "location": "/api/v0.0.1/#api-references", 
+            "text": "", 
+            "title": "API References"
+        }, 
+        {
+            "location": "/api/ner_api/", 
+            "text": "NER API \u306b\u3064\u3044\u3066\n\n\n\u4f7f\u7528\u53ef\u80fd\u306a NER API Server \u306eAPI\u4ed5\u69d8\u3092\u793a\u3057\u307e\u3059\u3002\n\n\nswagger: \n2.0\n\nbasePath: /\nproduces:\n  - application/json\npaths:\n  /ner:\n    get:\n      summary: NER Server Status\n      description: The NER get endpoint returns information about the NER server status.\n      responses:\n        200:\n          description: An array of products\n          schema:\n            type: object\n            properties:\n              status:\n                type: string\n                description: 'available' or 'unavailable'.\n              current:\n                type: string\n                description: other information.\n              message:\n                type: string\n                description: other messages.\n    post:\n      summary: NER tokens\n      description: The NER post endpoint returns tokens and named entities.\n      parameters:\n        - name: text\n          in: query\n          description: text including sentences to do NER.\n          required: true\n          type: string\n      responses:\n        200:\n          description: An array of products\n          schema:\n            type: object\n            properties:\n              tokens:\n                type: array\n                items:\n                  type: object\n                    properties:\n                      text:\n                        type: string\n                        description: one tokenized token.\n                      label:\n                        type: string\n                        description: label specifying named entity\n\n\n\n\n\u5177\u4f53\u7684\u306b\u306f\u6b21\u306e\u3088\u3046\u306a\u30ec\u30b9\u30dd\u30f3\u30b9\u3092\u8fd4\u3059\u3082\u306e\u3067\u3059\u3002\n\n\n$ curl localhost:9000/ner  -s | jq\n{\n  \nstatus\n: \navailable\n,\n  \ncurrent\n: \nenglish.all.3class.distsim.crf.ser.gz\n,\n  \nmessage\n: \nyou can use these classifiers: english.all.3class.distsim.crf.ser.gz, english.conll.4class.distsim.crf.ser.gz, english.muc.7class.distsim.crf.ser.gz\n\n}\n$ curl --header \nContent-type: application/json\n --request POST --data '{\ntext\n:\nI live in Japan.\n}' http://localhost:9000/ner -s | jq\n{\n  \ntokens\n: [\n    {\n      \ntext\n: \nI\n,\n      \nlabel\n: \nO\n\n    },\n    {\n      \ntext\n: \nlive\n,\n      \nlabel\n: \nO\n\n    },\n    {\n      \ntext\n: \nin\n,\n      \nlabel\n: \nO\n\n    },\n    {\n      \ntext\n: \nJapan\n,\n      \nlabel\n: \nLOCATION\n\n    },\n    {\n      \ntext\n: \n.\n,\n      \nlabel\n: \nO\n\n    }\n  ]\n}", 
+            "title": "NER API \u4ed5\u69d8"
+        }, 
+        {
+            "location": "/api/ner_api/#ner-api", 
+            "text": "\u4f7f\u7528\u53ef\u80fd\u306a NER API Server \u306eAPI\u4ed5\u69d8\u3092\u793a\u3057\u307e\u3059\u3002  swagger:  2.0 \nbasePath: /\nproduces:\n  - application/json\npaths:\n  /ner:\n    get:\n      summary: NER Server Status\n      description: The NER get endpoint returns information about the NER server status.\n      responses:\n        200:\n          description: An array of products\n          schema:\n            type: object\n            properties:\n              status:\n                type: string\n                description: 'available' or 'unavailable'.\n              current:\n                type: string\n                description: other information.\n              message:\n                type: string\n                description: other messages.\n    post:\n      summary: NER tokens\n      description: The NER post endpoint returns tokens and named entities.\n      parameters:\n        - name: text\n          in: query\n          description: text including sentences to do NER.\n          required: true\n          type: string\n      responses:\n        200:\n          description: An array of products\n          schema:\n            type: object\n            properties:\n              tokens:\n                type: array\n                items:\n                  type: object\n                    properties:\n                      text:\n                        type: string\n                        description: one tokenized token.\n                      label:\n                        type: string\n                        description: label specifying named entity  \u5177\u4f53\u7684\u306b\u306f\u6b21\u306e\u3088\u3046\u306a\u30ec\u30b9\u30dd\u30f3\u30b9\u3092\u8fd4\u3059\u3082\u306e\u3067\u3059\u3002  $ curl localhost:9000/ner  -s | jq\n{\n   status :  available ,\n   current :  english.all.3class.distsim.crf.ser.gz ,\n   message :  you can use these classifiers: english.all.3class.distsim.crf.ser.gz, english.conll.4class.distsim.crf.ser.gz, english.muc.7class.distsim.crf.ser.gz \n}\n$ curl --header  Content-type: application/json  --request POST --data '{ text : I live in Japan. }' http://localhost:9000/ner -s | jq\n{\n   tokens : [\n    {\n       text :  I ,\n       label :  O \n    },\n    {\n       text :  live ,\n       label :  O \n    },\n    {\n       text :  in ,\n       label :  O \n    },\n    {\n       text :  Japan ,\n       label :  LOCATION \n    },\n    {\n       text :  . ,\n       label :  O \n    }\n  ]\n}", 
+            "title": "NER API \u306b\u3064\u3044\u3066"
+        }, 
+        {
+            "location": "/resources/", 
+            "text": "Sentence Clustering Algorithm\n\n\nBREADs \u3068\u304b\u306e\u8efd\u3044\u7d39\u4ecb\n\n\nDatabase\n\n\nElasticsearch \u306e\u8efd\u3044\u7d39\u4ecb", 
+            "title": "Resources"
+        }, 
+        {
+            "location": "/resources/#sentence-clustering-algorithm", 
+            "text": "BREADs \u3068\u304b\u306e\u8efd\u3044\u7d39\u4ecb", 
+            "title": "Sentence Clustering Algorithm"
+        }, 
+        {
+            "location": "/resources/#database", 
+            "text": "Elasticsearch \u306e\u8efd\u3044\u7d39\u4ecb", 
+            "title": "Database"
+        }, 
+        {
+            "location": "/versions/", 
+            "text": "Versions of Knowledge Retrieval\n\n\nThese branches are available on this site.\n\n\n\n\nv0.1.0", 
+            "title": "Versions"
+        }, 
+        {
+            "location": "/versions/#versions-of-knowledge-retrieval", 
+            "text": "These branches are available on this site.   v0.1.0", 
+            "title": "Versions of Knowledge Retrieval"
+        }
+    ]
+}
