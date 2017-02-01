@@ -1,2 +1,3 @@
 # relretrieval
-Related Relation Retrieval
+
+A set of python modules to retrieve related relationships.

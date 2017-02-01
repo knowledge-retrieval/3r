@@ -1,0 +1,12 @@
+site_name: Related Relation Retrieval
+pages:
+    - Home: index.md
+    - Get Started: get_started.md
+    - Guides: guides.md
+    - API v0.0.1:
+      - '3R API 仕様': api/v0.0.1.md
+      - 'NER API 仕様': 'api/ner_api.md'
+    - Resources: resources.md
+    - Versions: versions.md
+extra_css: [css/h_margin_top.css]
+google_analytics: ['UA-90410680-1', 'sosuke-k.github.io']

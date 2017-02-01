@@ -1,0 +1,19 @@
+{
+  "name": "relretrieval",
+  "version": "0.0.1",
+  "description": "A set of python modules to retrieve related relationships.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knowledge-retrieval/relretrieval.git"
+  },
+  "author": "sosuke-k",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knowledge-retrieval/relretrieval/issues"
+  },
+  "homepage": "https://github.com/knowledge-retrieval/relretrieval",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4"
+  }
+}
