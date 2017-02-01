@@ -7,35 +7,6 @@ import math
 from elasticsearch_manager import ElasticsearchManager
 
 
-class ArticleManager(ElasticsearchManager):
-
-    def __init__(self, host="localhost:9200"):
-        ElasticsearchManager.__init__(self, host)
-        self.index = "wikipedia-en-articles"
-        self.doc_type = "wikipedia-en-articles-type"
-        self.properties = {
-            "title": {
-                "type": "string",
-                "store": "true",
-                "index": "analyzed",
-                "term_vector": "with_positions_offsets",
-            },
-            "text": {
-                "type": "string",
-                "store": "true",
-                "index": "analyzed",
-                "term_vector": "with_positions_offsets",
-            },
-        }
-
-    def get_text_tfidf(self, doc_id):
-        term_vectors = self.termvectors(doc_id)["text"]["terms"].items()
-        sum_tf = float(sum([values["term_freq"] for term, values in term_vectors]))
-        doc_count = float(self.doc_count())
-        return {term: values["term_freq"] / sum_tf * math.log(doc_count / values["doc_freq"] + 1)
-                for term, values in term_vectors}
-
-
 class SentenceManager(ElasticsearchManager):
     """
     文単位でのデータベースマネージャー
@@ -137,7 +108,7 @@ class SentenceManager(ElasticsearchManager):
         }
         return self.search(body)
 
-    def get_sentences_having_more_than_two_entities(self, size=size):
+    def get_sentences_having_more_than_two_entities(self, size=10):
         # TODO
         # elasticsearchのページネーション的なやつのイテレータを返したい
         body = {

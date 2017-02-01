@@ -15,9 +15,13 @@ AUTHOR = "Sosuke Kato"
 AUTHOR_EMAIL = "snoopies.drum@gmail.com"
 URL = "https://github.com/knowledge-retrieval/3r"
 LICENSE = "MIT"
-PACKAGES = ["rrrelation"]
-PACKAGE_DIR = {"rrrelation": "rrrelation"}
-# SCRIPTS = ["scripts/generate-mdcorpus-database.py"]
+PACKAGES = ["rrrelation", "rrrelation.app", "rrrelation.es", "rrrelation.ner"]
+PACKAGE_DIR = {
+    "rrrelation": "rrrelation",
+    "rrrelation.app": "rrrelation/app",
+    "rrrelation.es": "rrrelation/es",
+    "rrrelation.ner": "rrrelation/ner",
+}
 
 import rrrelation
 VERSION = rrrelation.__version__
@@ -40,7 +44,6 @@ def setup_package():
                     packages=PACKAGES,
                     install_requires=DEPENDENCIES,
                     package_dir=PACKAGE_DIR,
-                    # scripts=SCRIPTS,
                     )
 
     setup(**metadata)

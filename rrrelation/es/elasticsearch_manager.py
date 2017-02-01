@@ -1,12 +1,14 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 """
 Elasticsearch 関連の抽象クラスや共通メソッド
 """
 
 from elasticsearch import Elasticsearch, helpers
 
-from knowledgeretrieval.textutils.code import unicode_only_string
-from knowledgeretrieval.settings import LogSetting
+
+def unicode_only_string(obj):
+    # str の encode として utf-8 以外は想定していない
+    return unicode(obj, "utf-8") if (isinstance(obj, str)) else obj
 
 
 class ElasticsearchManager:
@@ -68,8 +70,6 @@ class ElasticsearchManager:
         https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-params.html
 
         """
-        self.logger = LogSetting.getLogger()
-        self.logger.debug("host = " + host)
         self.es = Elasticsearch(host)
         self.settings = settings if settings != None else self.settings_default
 
@@ -80,7 +80,6 @@ class ElasticsearchManager:
         body = {
             "settings": self.settings,
         }
-        self.logger.debug("create index")
         self.es.indices.create(index=self.index,  body=body)
 
     def put_mapping(self):
@@ -92,21 +91,18 @@ class ElasticsearchManager:
                 "properties": self.properties,
             },
         }
-        self.logger.debug("put mapping")
         self.es.indices.put_mapping(index=self.index, doc_type=self.doc_type, body=mapping)
 
     def delete_index(self):
         """
         インデックスを削除
         """
-        self.logger.debug("delete index")
         self.es.indices.delete(index=self.index)
 
     def refresh(self):
         """
         インデックスをリフレッシュ？
         """
-        self.logger.debug("refresh index")
         self.es.indices.refresh(index=self.index)
 
     def extract_properties(self, item):

@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 
+import os
+
 from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 setattr(app, "is_training", False)
+
+from rrrelation.ner.tagger import NERTagger
+from rrrelation.es.rrrelation_manager import SentenceManager
 
 
 @app.route("/")
@@ -19,8 +24,27 @@ def docs():
         text = request.json["text"]
         print text
 
-        # TODO
-        # text をインできシング
+        article_id = request.json.get("article_id", "")
+        print article_id
+
+        sentence_manager = SentenceManager(host=os.getenv("ELASTICSEARCH_URL"))
+        # sentence_manager = SentenceManager()
+        tagger = NERTagger(host=os.getenv("NER_API_URL"))
+
+        tokens_list = tagger.apply([text])
+
+        print tokens_list
+
+        for order, tokens in enumerate(tokens_list):
+            sentence = {}
+            sentence["tokens"] = [{"token": tup[0]} for tup in tokens]
+            sentence["article_id"] = article_id
+            sentence["order"] = order
+            sentence["entities"] = [{"token_index": token_index, "token": token[0], "label": token[1]}
+                                    for token_index, token in enumerate(tokens) if token[1] != u"O"]
+
+            print "saving sentence", sentence
+            sentence_manager.save(sentence)
 
         return jsonify(status="ok")
     except Exception as e:
