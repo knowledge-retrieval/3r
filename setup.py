@@ -24,6 +24,7 @@ VERSION = rrrelation.__version__
 
 DEPENDENCIES = [
     "Flask==0.12",
+    "requests==2.9.1",
 ]
 
 
