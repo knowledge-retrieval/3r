@@ -7,7 +7,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-DISTNAME = "rrr"
+DISTNAME = "rrrelation"
 DESCRIPTION = "A set of python modules to retrieve related relationships"
 # with open("README.rst") as f:
 #     LONG_DESCRIPTION = f.read()
@@ -15,12 +15,12 @@ AUTHOR = "Sosuke Kato"
 AUTHOR_EMAIL = "snoopies.drum@gmail.com"
 URL = "https://github.com/knowledge-retrieval/3r"
 LICENSE = "MIT"
-PACKAGES = ["rrr"]
-PACKAGE_DIR = {"rrr": "rrr"}
+PACKAGES = ["rrrelation"]
+PACKAGE_DIR = {"rrrelation": "rrrelation"}
 # SCRIPTS = ["scripts/generate-mdcorpus-database.py"]
 
-import rrr
-VERSION = rrr.__version__
+import rrrelation
+VERSION = rrrelation.__version__
 
 DEPENDENCIES = [
     "Flask==0.12",
