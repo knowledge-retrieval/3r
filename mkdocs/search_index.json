@@ -136,21 +136,6 @@
             "title": "relation \u306e\u53d6\u5f97"
         }, 
         {
-            "location": "/guides/", 
-            "text": "Tutorials\n\n\n\n\n\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11\n\n\n\n\n\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11\n\n\n\u5177\u4f53\u7684\u306b\u30c7\u30fc\u30bf\u3092\u4f7f\u3063\u305f\u30cf\u30f3\u30ba\u30aa\u30f3", 
-            "title": "Guides"
-        }, 
-        {
-            "location": "/guides/#tutorials", 
-            "text": "\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11", 
-            "title": "Tutorials"
-        }, 
-        {
-            "location": "/guides/#1", 
-            "text": "\u5177\u4f53\u7684\u306b\u30c7\u30fc\u30bf\u3092\u4f7f\u3063\u305f\u30cf\u30f3\u30ba\u30aa\u30f3", 
-            "title": "\u30c1\u30e5\u30fc\u30c8\u30ea\u30a2\u30eb\uff11"
-        }, 
-        {
             "location": "/api/v0.0.1/", 
             "text": "relretrieval API References\n\n\nPOST /docs\n\n\nPost each documents\n\n\n\n\nContent-Type: \"application/json\"\n\n\n\n\nInclude the \ntext\n text in the body:\n\n\n{\n  \narticle_id\n: 1,\n  \ntext\n: \nThe tech company Soundcloud is based in Berlin, capital of Germany.\n\n}\n\n\n\n\n===\n\n\n\n\nStatus: \n200\n\n\nContent-Type: \"application/json; charset=UTF-8\"\n\n\n\n\n{\n  \nstatus\n: \nok\n\n}\n\n\n\n\nPOST /start\n\n\nStart BREADS iterations\n\n\n\n\nContent-Type: \"application/json\"\n\n\n\n\nInclude options:\n\n\n{\n  \nmax_iter\n: 10\n}\n\n\n\n\n===\n\n\n\n\nStatus: \n200\n\n\nContent-Type: \"application/json; charset=UTF-8\"\n\n\n\n\n{\n  \nstatus\n: \nok\n\n}\n\n\n\n\nGET /relations?query=CEO\n\n\nGets clusters including \"CEO\" as a relations word\n\n\n\n\nContent-Type: \"application/json\"\n\n\n\n\n===\n\n\n\n\nStatus: \n200\n\n\nContent-Type: \"application/json; charset=UTF-8\"\n\n\n\n\n{\n  \nclusters\n: [\n    {\n      \nrelations\n: [\n        {\n          \nBEF\n: \n,\n          \nBET\n: \nis CEO of\n,\n          \nAFT\n: \n,\n          \ntuples\n: [\n            {\n              \nfirst\n: \nLarry Page\n,\n              \nsecond\n: \nGoogle\n\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}", 
             "title": "relretrieval API \u4ed5\u69d8"
