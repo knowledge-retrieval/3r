@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Get Started - Related Relation Retrieval</title>
+        <title>Get Started - relretrieval</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -48,7 +48,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="..">Related Relation Retrieval</a>
+            <a class="navbar-brand" href="..">relretrieval</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -109,31 +109,50 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#introduction">Introduction</a></li>
-        <li class="main "><a href="#download-and-setup">Download and Setup</a></li>
+        <li class="main active"><a href="#_1">はじめに</a></li>
+        <li class="main "><a href="#_2">ダウンロードとセットアップ</a></li>
             <li><a href="#elasticsearch">Elasticsearch</a></li>
             <li><a href="#ner-api-server">NER API Server</a></li>
             <li><a href="#relretrieval">relretrieval</a></li>
-            <li><a href="#_8">簡単な使い方</a></li>
+            <li><a href="#_10">簡単な使い方</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="introduction">Introduction</h2>
+<p><link href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+<script>
+  console.log("initialize mermaid");
+  mermaid.initialize({startOnLoad:true});
+</script></p>
+<h2 id="_1">はじめに</h2>
 <p>本システム (<code>relretrieval</code>) と必要となる関連システム (<code>Elasticsearch</code>、<code>NER API Server</code>) 、及びそれらを利用する<code>アプリケーション</code>の関係を示します。</p>
 <p><center>
-  <img width="300px" src="../img/overview_alpha.png" style="background-color:rgba(0,0,0,0);border-width:0px;">
+<div class="mermaid">
+graph TD
+    subgraph ""
+        app[fa:fa-user アプリケーション]
+    end
+    app -.-&gt; 3r
+    subgraph 本システム及び関連システム
+        3r[relretrieval]
+        es[fa:fa-database Elasticsearch]
+        ner[fa:fa-scissors NER API Server]
+        3r -.-&gt; es
+        3r -.-&gt; ner
+    end
+</div>
 </center></p>
 <p>図に示すように本システムは、バックエンドで固有表現抽出 (NER) をするためのサーバーと、データベースとしてElasticsearchを使用します。</p>
-<h2 id="download-and-setup">Download and Setup</h2>
+<h2 id="_2">ダウンロードとセットアップ</h2>
 <h3 id="elasticsearch">Elasticsearch</h3>
 <p>データベースとして<a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a>を利用します。
-すでにたっている場合は必要ありませんが、以下のインデックス名及びプラグインを使用します。</p>
+すでに起動している場合は必要ありませんが、以下のインデックス名及びプラグインを使用します。</p>
 <ul>
 <li>インデックス : <code>relretrieval</code></li>
 <li>プラグイン : <code>lang-javascript</code></li>
 </ul>
-<h4 id="_1">インストール例</h4>
+<h4 id="_3">インストール例</h4>
 <pre><code>$ mkdir ./data
 $ wget -P ./data/ https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip
 $ unzip -d ./data/ ./data/elasticsearch-2.3.4.zip
@@ -147,10 +166,10 @@ $ ./data/elasticsearch-2.3.4/bin/elasticsearch
 <h3 id="ner-api-server">NER API Server</h3>
 <p>本システムでは固有表現を外部のAPIを用いて抽出を行うことで、固有表現抽出 (NER) に用いるツールの変更を容易にしています。
 固有表現抽出用のAPIが満たすべき仕様については<a href="../api/ner_api/">こちら</a>。</p>
-<h4 id="_2">インストール例</h4>
+<h4 id="_4">インストール例</h4>
 <p>上記のAPI仕様を満たす固有表現抽出サーバー (<code>Play NER Server</code>) を本システムとは別に提供しています。
 <code>Play NER Server</code> の使用には <a href="https://www.lightbend.com/activator/download"><code>activator</code></a> のインストールが必要です。</p>
-<h5 id="_3">ソースコードのダウンロード</h5>
+<h5 id="_5">ソースコードのダウンロード</h5>
 <pre><code>$ git clone https://github.com/sosuke-k/ner-play-server
 </code></pre>
 
@@ -174,7 +193,7 @@ $ ./bin/activator run
 </code></pre>
 
 <h3 id="relretrieval">relretrieval</h3>
-<h4 id="_4">環境変数の追加</h4>
+<h4 id="_6">環境変数の追加</h4>
 <ul>
 <li><code>ELASTICSEARCH_URL</code> : Elasticsearch のエンドポイント</li>
 <li><code>NER_API_URL</code> : 固有表現抽出サーバーのエンドポイント</li>
@@ -184,18 +203,18 @@ $ ./bin/activator run
 export NER_API_URL &quot;http://localhost:9000&quot;
 </code></pre>
 
-<h4 id="_5">インストール</h4>
+<h4 id="_7">インストール</h4>
 <pre><code>pip install relretrieval
 </code></pre>
 
-<h4 id="_6">インデックスの初期化</h4>
+<h4 id="_8">インデックスの初期化</h4>
 <pre><code>$ python -m relretrieval --init True
 Elasticsearch(2.3.4) ENDPOINT : http://localhost:9200
 Initializing ...
 done
 </code></pre>
 
-<h4 id="_7">起動</h4>
+<h4 id="_9">起動</h4>
 <pre><code>$ python -m relretrieval
 Elasticsearch(2.3.4) ENDPOINT : http://localhost:9200
 NER API ENDPOINT : http://localhost:9000
@@ -203,8 +222,8 @@ NER API ENDPOINT : http://localhost:9000
 ...
 </code></pre>
 
-<h3 id="_8">簡単な使い方</h3>
-<h4 id="_9">文を保存</h4>
+<h3 id="_10">簡単な使い方</h3>
+<h4 id="_11">文を保存</h4>
 <p><code>article_id=1</code> で <code>I live in Japan.</code> を保存する例です。</p>
 <pre><code>$ curl --header &quot;Content-type: application/json&quot; --request POST --data '{&quot;article_id&quot;: 1, &quot;text&quot;:&quot;I live in Japan.&quot;}' http://localhost:5000/docs -s | jq
 {
