@@ -1,20 +1,40 @@
-## Introduction
+<link href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css" rel="stylesheet" type="text/css">
+<script src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+<script>
+  console.log("initialize mermaid");
+  mermaid.initialize({startOnLoad:true});
+</script>
+
+## はじめに
 
 本システム (`relretrieval`) と必要となる関連システム (`Elasticsearch`、`NER API Server`) 、及びそれらを利用する``アプリケーション``の関係を示します。
 
 <center>
-  <img width="300px" src="../img/overview_alpha.png" style="background-color:rgba(0,0,0,0);border-width:0px;">
+<div class="mermaid">
+graph TD
+    subgraph ""
+        app[fa:fa-user アプリケーション]
+    end
+    app -.-> 3r
+    subgraph 本システム及び関連システム
+        3r[relretrieval]
+        es[fa:fa-database Elasticsearch]
+        ner[fa:fa-scissors NER API Server]
+        3r -.-> es
+        3r -.-> ner
+    end
+</div>
 </center>
 
 
 図に示すように本システムは、バックエンドで固有表現抽出 (NER) をするためのサーバーと、データベースとしてElasticsearchを使用します。
 
-## Download and Setup
+## ダウンロードとセットアップ
 
 ### Elasticsearch
 
 データベースとして[Elasticsearch](https://www.elastic.co/products/elasticsearch)を利用します。
-すでにたっている場合は必要ありませんが、以下のインデックス名及びプラグインを使用します。
+すでに起動している場合は必要ありませんが、以下のインデックス名及びプラグインを使用します。
 
 * インデックス : `relretrieval`
 * プラグイン : `lang-javascript`

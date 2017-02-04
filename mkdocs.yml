@@ -1,4 +1,4 @@
-site_name: Related Relation Retrieval
+site_name: relretrieval
 pages:
     - Home: index.md
     - Get Started: get_started.md
