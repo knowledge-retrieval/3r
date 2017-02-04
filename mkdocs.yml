@@ -2,7 +2,6 @@ site_name: relretrieval
 pages:
     - Home: index.md
     - Get Started: get_started.md
-    - Guides: guides.md
     - API v0.0.1:
       - 'relretrieval API 仕様': api/v0.0.1.md
       - 'NER API 仕様': 'api/ner_api.md'
