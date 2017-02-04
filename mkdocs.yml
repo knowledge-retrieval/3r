@@ -4,7 +4,7 @@ pages:
     - Get Started: get_started.md
     - Guides: guides.md
     - API v0.0.1:
-      - '3R API 仕様': api/v0.0.1.md
+      - 'relretrieval API 仕様': api/v0.0.1.md
       - 'NER API 仕様': 'api/ner_api.md'
     - Resources: resources.md
     - Versions: versions.md

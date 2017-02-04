@@ -19,6 +19,11 @@
 
 * 知識構造を簡単にシステムに組み込みたい人
 
+## リンク
+
+* [GitHub](https://github.com/knowledge-retrieval/relretrieval)
+* [PyPi](https://pypi.python.org/pypi/relretrieval)
+
 ## Licence
 
 MIT

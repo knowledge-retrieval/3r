@@ -138,11 +138,58 @@ NER API ENDPOINT : http://localhost:9000
 
 #### 文を保存
 
-`article_id=1` で `I live in Japan.` を保存する例です。
+`article_id=1` で `The tech company Soundcloud is based in Berlin, capital of Germany.` を保存する例です。
 
 ```
-$ curl --header "Content-type: application/json" --request POST --data '{"article_id": 1, "text":"I live in Japan."}' http://localhost:5000/docs -s | jq
+$ url --header "Content-type: application/json" --request POST --data '{"article_id": 1, "text":"The tech company Soundcloud is based in Berlin, capital of Germany."}' http://localhost:5000/docs -s | jq
 {
   "status": "ok"
+}
+```
+
+#### 学習を開始
+
+```
+$ curl --header "Content-type: application/json" --request POST --data '{"max_iter": 2}' http://localhost:5000/start -s | jq
+{
+  "message": "Training begins",
+  "status": "ok"
+}
+```
+
+#### **relation** の取得
+
+```
+curl http://localhost:5000/relations -s | jq
+{
+  "clusters": [
+    {
+      "id": "AVoHVpws7qHvD9dVUw6Y",
+      "relations": [
+        {
+          "AFT": ".",
+          "BEF": "based in",
+          "BET": ", capital of",
+          "tuples": [
+            {
+              "first": "Berlin",
+              "second": "Germany"
+            }
+          ]
+        },
+        {
+          "AFT": ", capital",
+          "BEF": "tech company",
+          "BET": "is based in",
+          "tuples": [
+            {
+              "first": "Soundcloud",
+              "second": "Berlin"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 ```
