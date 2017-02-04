@@ -23,7 +23,7 @@ from Tuple import Tuple
 # from Sentence import Sentence
 from ReVerb import Reverb
 
-from relretrieval.es.relretrieval_manager import SentenceManager
+from relretrieval.es.relretrieval_manager import SentenceManager, PatternManager
 
 
 # useful for debugging
@@ -186,7 +186,7 @@ class BREDS(object):
 
         sentence_manager = SentenceManager(host=os.getenv("ELASTICSEARCH_URL"))
         sentences = sentence_manager.get_sentences_having_more_than_two_entities()
-        print sentences
+        print "sentences", sentences
         # return
 
         count = 0
@@ -528,6 +528,7 @@ class BREDS(object):
                 self.curr_iteration += 1
 
         self.write_relationships_to_disk()
+        self.save_patters()
 
     def cluster_tuples(self, matched_tuples):
         # this is a single-pass clustering
@@ -566,8 +567,40 @@ class BREDS(object):
             else:
                 self.patterns[max_similarity_cluster_index].add_tuple(t)
 
+    def save_patters(self):
+        print "save_patters"
+        print self.patterns
+        pattern_manager = PatternManager(os.getenv("ELASTICSEARCH_URL"))
+
+        for p in self.patterns:
+            relations = []
+            for t in p.tuples:
+                relation = {
+                    "BEF": " ".join(t.bef_words),
+                    "BET": " ".join(t.bet_words),
+                    "AFT": " ".join(t.aft_words),
+                    "tuples": [
+                        {
+                            "first": t.e1,
+                            "second": t.e2,
+                        },
+                    ],
+                }
+                relations.append(relation)
+            pattern_manager.save({"relations": relations})
+
 
 def main():
+    pattern_manager = PatternManager(host=os.getenv("ELASTICSEARCH_URL"))
+    body = {
+        "query": {"match_all": {}}
+    }
+    res = pattern_manager.search(body)
+
+    print res
+
+    return
+
     similarity = 0.0
     confidence = 0.0
 

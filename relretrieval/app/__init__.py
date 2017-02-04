@@ -8,7 +8,8 @@ app = Flask(__name__)
 setattr(app, "is_training", False)
 
 from relretrieval.ner.tagger import NERTagger
-from relretrieval.es.relretrieval_manager import SentenceManager
+from relretrieval.es.relretrieval_manager import SentenceManager, PatternManager
+from relretrieval.BREDS.check import BREDS
 
 
 @app.route("/")
@@ -62,10 +63,14 @@ def start():
 
         app.is_training = True
 
-        # TODO
-        # BREADS で学習
+        # BREDS
+        similarity = 0.0
+        confidence = 0.0
+        breads = BREDS(similarity, confidence)
+        breads.generate_tuples()
+        breads.init_bootstrap(tuples=None)
 
-        # app.is_training = False
+        app.is_training = False
 
         return jsonify(status="ok", message="Training begins")
     except Exception as e:
@@ -78,14 +83,23 @@ def relations():
     print request.args
 
     try:
-        query = rrequest.args.get("query", None)
+        query = request.args.get("query", None)
+        patters = []
+        pattern_manager = PatternManager(host=os.getenv("ELASTICSEARCH_URL"))
+
         if not query:
-            raise Exception("parameters not includes query")
+            body = {
+                "query": {"match_all": {}}
+            }
+            patters = pattern_manager.search(body)
 
-        # TODO
-        # query から検索
+        else:
+            print query
+            patters = pattern_manager.find_patters_by_query({"BEF": query})
 
-        return jsonify(status="ok")
+        print patters
+
+        return jsonify(clusters=patters)
     except Exception as e:
         print e.message
         return jsonify(status="error", message=e.message)

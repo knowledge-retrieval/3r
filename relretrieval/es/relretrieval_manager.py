@@ -7,6 +7,67 @@ import math
 from elasticsearch_manager import ElasticsearchManager
 
 
+class PatternManager(ElasticsearchManager):
+
+    def __init__(self, host="localhost:9200"):
+        ElasticsearchManager.__init__(self, host)
+        self.index = "relretrieval"
+        self.doc_type = "patterns"
+        self.properties = {
+            "relations": {
+                "type": "nested",
+                "properties": {
+                    "BEF": {
+                        "type": "string",
+                        "store": "true",
+                        "index": "analyzed",
+                    },
+                    "BET": {
+                        "type": "string",
+                        "store": "true",
+                        "index": "analyzed",
+                    },
+                    "AFT": {
+                        "type": "string",
+                        "store": "true",
+                        "index": "analyzed",
+                    },
+                    "tuples": {
+                        "type": "nested",
+                        "properties": {
+                            "first": {
+                                "type": "string",
+                                "store": "true",
+                                "index": "not_analyzed",
+                            },
+                            "second": {
+                                "type": "string",
+                                "store": "true",
+                                "index": "not_analyzed",
+                            },
+                        },
+                    },
+                },
+            },
+        }
+
+    def find_patters_by_query(self, query):
+        should_words = [{"term": {"relations.%s" % key: value}} for key, value in query.items()]
+        body = {
+            "query": {
+                "nested": {
+                    "path": "relations",
+                    "filter": {
+                        "bool": {
+                            "should": should_words
+                        }
+                    }
+                }
+            }
+        }
+        return self.search(body)
+
+
 class SentenceManager(ElasticsearchManager):
     """
     文単位でのデータベースマネージャー
@@ -23,7 +84,7 @@ class SentenceManager(ElasticsearchManager):
     def __init__(self, host="localhost:9200"):
         ElasticsearchManager.__init__(self, host)
         # article と index を同じにした場合のメリットとデメリットは要調査
-        self.index = "knowledge-retrieval"
+        self.index = "relretrieval"
         self.doc_type = "sentences"
         self.properties = {
             "article_id": {
