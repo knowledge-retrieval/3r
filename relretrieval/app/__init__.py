@@ -14,7 +14,9 @@ from relretrieval.BREDS.check import BREDS
 
 @app.route("/")
 def hello():
-    return jsonify(is_training=app.is_training)
+    res = jsonify(is_training=app.is_training)
+    res.headers['Access-Control-Allow-Origin'] = '*'
+    return res
 
 
 @app.route("/docs", methods=["POST"])
@@ -47,10 +49,14 @@ def docs():
             print "saving sentence", sentence
             sentence_manager.save(sentence)
 
-        return jsonify(status="ok")
+        res = jsonify(status="ok")
+        res.headers['Access-Control-Allow-Origin'] = '*'
+        return res
     except Exception as e:
         print e.message
-        return jsonify(status="error", message=e.message)
+        res = jsonify(status="error", message=e.message)
+        res.headers['Access-Control-Allow-Origin'] = '*'
+        return res
 
 
 @app.route("/start", methods=["POST"])
@@ -72,10 +78,14 @@ def start():
 
         app.is_training = False
 
-        return jsonify(status="ok", message="Training begins")
+        res = jsonify(status="ok", message="Training begins")
+        res.headers['Access-Control-Allow-Origin'] = '*'
+        return res
     except Exception as e:
         print e.message
-        return jsonify(status="error", message=e.message)
+        res = jsonify(status="error", message=e.message)
+        res.headers['Access-Control-Allow-Origin'] = '*'
+        return res
 
 
 @app.route("/relations")
@@ -99,10 +109,14 @@ def relations():
 
         print patters
 
-        return jsonify(clusters=patters)
+        res = jsonify(clusters=patters)
+        res.headers['Access-Control-Allow-Origin'] = '*'
+        return res
     except Exception as e:
         print e.message
-        return jsonify(status="error", message=e.message)
+        res = jsonify(status="error", message=e.message)
+        res.headers['Access-Control-Allow-Origin'] = '*'
+        return res
 
 
 def run():
