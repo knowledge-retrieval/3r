@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>3R API 仕様 - relretrieval</title>
+        <title>relretrieval API 仕様 - relretrieval</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -69,7 +69,7 @@
                         <ul class="dropdown-menu">
                             
 <li class="active">
-    <a href="./">3R API 仕様</a>
+    <a href="./">relretrieval API 仕様</a>
 </li>
                             
 <li >
@@ -109,12 +109,88 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#api-references">API References</a></li>
+        <li class="main active"><a href="#relretrieval-api-references">relretrieval API References</a></li>
+            <li><a href="#post-docs">POST /docs</a></li>
+            <li><a href="#post-start">POST /start</a></li>
+            <li><a href="#get-relationsqueryceo">GET /relations?query=CEO</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="api-references">API References</h2></div>
+<h1 id="relretrieval-api-references">relretrieval API References</h1>
+<h2 id="post-docs"><code>POST /docs</code></h2>
+<p>Post each documents</p>
+<ul>
+<li>Content-Type: "application/json"</li>
+</ul>
+<p>Include the <code>text</code> text in the body:</p>
+<pre><code>{
+  &quot;article_id&quot;: 1,
+  &quot;text&quot;: &quot;The tech company Soundcloud is based in Berlin, capital of Germany.&quot;
+}
+</code></pre>
+
+<p>===</p>
+<ul>
+<li>Status: <code>200</code></li>
+<li>Content-Type: "application/json; charset=UTF-8"</li>
+</ul>
+<pre><code class="json">{
+  &quot;status&quot;: &quot;ok&quot;
+}
+</code></pre>
+
+<h2 id="post-start"><code>POST /start</code></h2>
+<p>Start BREADS iterations</p>
+<ul>
+<li>Content-Type: "application/json"</li>
+</ul>
+<p>Include options:</p>
+<pre><code>{
+  &quot;max_iter&quot;: 10
+}
+</code></pre>
+
+<p>===</p>
+<ul>
+<li>Status: <code>200</code></li>
+<li>Content-Type: "application/json; charset=UTF-8"</li>
+</ul>
+<pre><code class="json">{
+  &quot;status&quot;: &quot;ok&quot;
+}
+</code></pre>
+
+<h2 id="get-relationsqueryceo"><code>GET /relations?query=CEO</code></h2>
+<p>Gets clusters including "CEO" as a relations word</p>
+<ul>
+<li>Content-Type: "application/json"</li>
+</ul>
+<p>===</p>
+<ul>
+<li>Status: <code>200</code></li>
+<li>Content-Type: "application/json; charset=UTF-8"</li>
+</ul>
+<pre><code class="json">{
+  &quot;clusters&quot;: [
+    {
+      &quot;relations&quot;: [
+        {
+          &quot;BEF&quot;: &quot;&quot;,
+          &quot;BET&quot;: &quot;is CEO of&quot;,
+          &quot;AFT&quot;: &quot;&quot;,
+          &quot;tuples&quot;: [
+            {
+              &quot;first&quot;: &quot;Larry Page&quot;,
+              &quot;second&quot;: &quot;Google&quot;
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">

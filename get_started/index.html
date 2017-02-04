@@ -69,7 +69,7 @@
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="../api/v0.0.1/">3R API 仕様</a>
+    <a href="../api/v0.0.1/">relretrieval API 仕様</a>
 </li>
                             
 <li >
@@ -224,10 +224,53 @@ NER API ENDPOINT : http://localhost:9000
 
 <h3 id="_10">簡単な使い方</h3>
 <h4 id="_11">文を保存</h4>
-<p><code>article_id=1</code> で <code>I live in Japan.</code> を保存する例です。</p>
-<pre><code>$ curl --header &quot;Content-type: application/json&quot; --request POST --data '{&quot;article_id&quot;: 1, &quot;text&quot;:&quot;I live in Japan.&quot;}' http://localhost:5000/docs -s | jq
+<p><code>article_id=1</code> で <code>The tech company Soundcloud is based in Berlin, capital of Germany.</code> を保存する例です。</p>
+<pre><code>$ url --header &quot;Content-type: application/json&quot; --request POST --data '{&quot;article_id&quot;: 1, &quot;text&quot;:&quot;The tech company Soundcloud is based in Berlin, capital of Germany.&quot;}' http://localhost:5000/docs -s | jq
 {
   &quot;status&quot;: &quot;ok&quot;
+}
+</code></pre>
+
+<h4 id="_12">学習を開始</h4>
+<pre><code>$ curl --header &quot;Content-type: application/json&quot; --request POST --data '{&quot;max_iter&quot;: 2}' http://localhost:5000/start -s | jq
+{
+  &quot;message&quot;: &quot;Training begins&quot;,
+  &quot;status&quot;: &quot;ok&quot;
+}
+</code></pre>
+
+<h4 id="relation"><strong>relation</strong> の取得</h4>
+<pre><code>curl http://localhost:5000/relations -s | jq
+{
+  &quot;clusters&quot;: [
+    {
+      &quot;id&quot;: &quot;AVoHVpws7qHvD9dVUw6Y&quot;,
+      &quot;relations&quot;: [
+        {
+          &quot;AFT&quot;: &quot;.&quot;,
+          &quot;BEF&quot;: &quot;based in&quot;,
+          &quot;BET&quot;: &quot;, capital of&quot;,
+          &quot;tuples&quot;: [
+            {
+              &quot;first&quot;: &quot;Berlin&quot;,
+              &quot;second&quot;: &quot;Germany&quot;
+            }
+          ]
+        },
+        {
+          &quot;AFT&quot;: &quot;, capital&quot;,
+          &quot;BEF&quot;: &quot;tech company&quot;,
+          &quot;BET&quot;: &quot;is based in&quot;,
+          &quot;tuples&quot;: [
+            {
+              &quot;first&quot;: &quot;Soundcloud&quot;,
+              &quot;second&quot;: &quot;Berlin&quot;
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
 </code></pre></div>
         </div>

@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "relretrieval\n\n\nRelated Relationships Retrieval\n\n\n\u77e5\u8b58\u69cb\u9020\u3092\u5229\u7528\u3057\u305f\u30b7\u30b9\u30c6\u30e0\u5bb9\u6613\u306b\u958b\u767a\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u308b\u30c4\u30fc\u30eb\n\n\nrelretrieval \u306b\u3064\u3044\u3066\n\n\n\u30b3\u30fc\u30d1\u30b9\u304b\u3089\u3001\u9806\u6b21\u30c6\u30ad\u30b9\u30c8\u3092\u5165\u529b\u3059\u308b\u3053\u3068\u3067ElasticsSearch\u4e0a\u306bindex\u3092\u4f5c\u6210\u3057\u3001\u305d\u306e\u30c7\u30fc\u30bf\u3092\u5143\u306b\u77e5\u8b58\u69cb\u9020\u3092\u751f\u6210\u3059\u308b\u3002\n\u95a2\u4fc2\u62bd\u51fa\u3001\u77e5\u8b58\u69cb\u9020\u306e\u69cb\u7bc9\u306b\u306fBREDS\u3092\u5229\u7528\u3057\u3001\u3053\u308c\u3092\u5b9f\u73fe\u3057\u3066\u3044\u308b\u3002\n\u751f\u6210\u3057\u305f\u77e5\u8b58\u69cb\u9020\u306f\u3001ElasticSearch\u306b\u3088\u308a\u691c\u7d22\u304c\u53ef\u80fd\u3068\u306a\u3063\u3066\u3044\u308b\u3002\n\n\nrelretrieval \u306e\u7279\u5fb4\n\n\n\n\n\u30b3\u30fc\u30d1\u30b9\u306e\u9078\u629e\u3001\u751f\u6210\u3055\u308c\u308b\u77e5\u8b58\u69cb\u9020\u306e\u5229\u7528\u6cd5\u306b\u81ea\u7531\u3092\u6301\u305f\u305b\u3053\u3068\u306b\u3088\u308b\u9ad8\u3044\u62e1\u5f35\u6027\n\n\n\u30c7\u30fc\u30bf\u53d6\u5f97\u306e\u305f\u3081\u306eAPI\u3092\u63d0\u4f9b\u3057\u3001\u77e5\u8b58\u69cb\u9020\u3092\u7c21\u5358\u306b\u30b7\u30b9\u30c6\u30e0\u306b\u7d44\u307f\u8fbc\u3080\u3053\u3068\u304c\u3067\u304d\u308b\n\n\n\n\nrelretrieval\u3092\u4f7f\u3063\u3066\u6b32\u3057\u3044\u4eba\n\n\n\n\n\u77e5\u8b58\u69cb\u9020\u3092\u7c21\u5358\u306b\u30b7\u30b9\u30c6\u30e0\u306b\u7d44\u307f\u8fbc\u307f\u305f\u3044\u4eba\n\n\n\n\nLicence\n\n\nMIT\n\n\nAuthor\n\n\n\n\nSosuke Kato\n\n\nKenta Tamaki", 
+            "text": "relretrieval\n\n\nRelated Relationships Retrieval\n\n\n\u77e5\u8b58\u69cb\u9020\u3092\u5229\u7528\u3057\u305f\u30b7\u30b9\u30c6\u30e0\u5bb9\u6613\u306b\u958b\u767a\u3059\u308b\u3053\u3068\u304c\u3067\u304d\u308b\u30c4\u30fc\u30eb\n\n\nrelretrieval \u306b\u3064\u3044\u3066\n\n\n\u30b3\u30fc\u30d1\u30b9\u304b\u3089\u3001\u9806\u6b21\u30c6\u30ad\u30b9\u30c8\u3092\u5165\u529b\u3059\u308b\u3053\u3068\u3067ElasticsSearch\u4e0a\u306bindex\u3092\u4f5c\u6210\u3057\u3001\u305d\u306e\u30c7\u30fc\u30bf\u3092\u5143\u306b\u77e5\u8b58\u69cb\u9020\u3092\u751f\u6210\u3059\u308b\u3002\n\u95a2\u4fc2\u62bd\u51fa\u3001\u77e5\u8b58\u69cb\u9020\u306e\u69cb\u7bc9\u306b\u306fBREDS\u3092\u5229\u7528\u3057\u3001\u3053\u308c\u3092\u5b9f\u73fe\u3057\u3066\u3044\u308b\u3002\n\u751f\u6210\u3057\u305f\u77e5\u8b58\u69cb\u9020\u306f\u3001ElasticSearch\u306b\u3088\u308a\u691c\u7d22\u304c\u53ef\u80fd\u3068\u306a\u3063\u3066\u3044\u308b\u3002\n\n\nrelretrieval \u306e\u7279\u5fb4\n\n\n\n\n\u30b3\u30fc\u30d1\u30b9\u306e\u9078\u629e\u3001\u751f\u6210\u3055\u308c\u308b\u77e5\u8b58\u69cb\u9020\u306e\u5229\u7528\u6cd5\u306b\u81ea\u7531\u3092\u6301\u305f\u305b\u3053\u3068\u306b\u3088\u308b\u9ad8\u3044\u62e1\u5f35\u6027\n\n\n\u30c7\u30fc\u30bf\u53d6\u5f97\u306e\u305f\u3081\u306eAPI\u3092\u63d0\u4f9b\u3057\u3001\u77e5\u8b58\u69cb\u9020\u3092\u7c21\u5358\u306b\u30b7\u30b9\u30c6\u30e0\u306b\u7d44\u307f\u8fbc\u3080\u3053\u3068\u304c\u3067\u304d\u308b\n\n\n\n\nrelretrieval\u3092\u4f7f\u3063\u3066\u6b32\u3057\u3044\u4eba\n\n\n\n\n\u77e5\u8b58\u69cb\u9020\u3092\u7c21\u5358\u306b\u30b7\u30b9\u30c6\u30e0\u306b\u7d44\u307f\u8fbc\u307f\u305f\u3044\u4eba\n\n\n\n\n\u30ea\u30f3\u30af\n\n\n\n\nGitHub\n\n\nPyPi\n\n\n\n\nLicence\n\n\nMIT\n\n\nAuthor\n\n\n\n\nSosuke Kato\n\n\nKenta Tamaki", 
             "title": "Home"
         }, 
         {
@@ -26,6 +26,11 @@
             "title": "relretrieval\u3092\u4f7f\u3063\u3066\u6b32\u3057\u3044\u4eba"
         }, 
         {
+            "location": "/#_1", 
+            "text": "GitHub  PyPi", 
+            "title": "\u30ea\u30f3\u30af"
+        }, 
+        {
             "location": "/#licence", 
             "text": "MIT", 
             "title": "Licence"
@@ -37,7 +42,7 @@
         }, 
         {
             "location": "/get_started/", 
-            "text": "console.log(\"initialize mermaid\");\n  mermaid.initialize({startOnLoad:true});\n\n\n\n\u306f\u3058\u3081\u306b\n\n\n\u672c\u30b7\u30b9\u30c6\u30e0 (\nrelretrieval\n) \u3068\u5fc5\u8981\u3068\u306a\u308b\u95a2\u9023\u30b7\u30b9\u30c6\u30e0 (\nElasticsearch\n\u3001\nNER API Server\n) \u3001\u53ca\u3073\u305d\u308c\u3089\u3092\u5229\u7528\u3059\u308b\n\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\n\u306e\u95a2\u4fc2\u3092\u793a\u3057\u307e\u3059\u3002\n\n\n\n\n\ngraph TD\n    subgraph \"\"\n        app[fa:fa-user \u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3]\n    end\n    app -.-\n 3r\n    subgraph \u672c\u30b7\u30b9\u30c6\u30e0\u53ca\u3073\u95a2\u9023\u30b7\u30b9\u30c6\u30e0\n        3r[relretrieval]\n        es[fa:fa-database Elasticsearch]\n        ner[fa:fa-scissors NER API Server]\n        3r -.-\n es\n        3r -.-\n ner\n    end\n\n\n\n\n\n\u56f3\u306b\u793a\u3059\u3088\u3046\u306b\u672c\u30b7\u30b9\u30c6\u30e0\u306f\u3001\u30d0\u30c3\u30af\u30a8\u30f3\u30c9\u3067\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u3092\u3059\u308b\u305f\u3081\u306e\u30b5\u30fc\u30d0\u30fc\u3068\u3001\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066Elasticsearch\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\n\n\n\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3068\u30bb\u30c3\u30c8\u30a2\u30c3\u30d7\n\n\nElasticsearch\n\n\n\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066\nElasticsearch\n\u3092\u5229\u7528\u3057\u307e\u3059\u3002\n\u3059\u3067\u306b\u8d77\u52d5\u3057\u3066\u3044\u308b\u5834\u5408\u306f\u5fc5\u8981\u3042\u308a\u307e\u305b\u3093\u304c\u3001\u4ee5\u4e0b\u306e\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u540d\u53ca\u3073\u30d7\u30e9\u30b0\u30a4\u30f3\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\n\n\n\n\n\u30a4\u30f3\u30c7\u30c3\u30af\u30b9 : \nrelretrieval\n\n\n\u30d7\u30e9\u30b0\u30a4\u30f3 : \nlang-javascript\n\n\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b\n\n\n$ mkdir ./data\n$ wget -P ./data/ https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip\n$ unzip -d ./data/ ./data/elasticsearch-2.3.4.zip\n$ echo \nscript.inline: true\n \n ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ echo \nscript.indexed: true\n \n ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ ./data/elasticsearch-2.3.4/bin/plugin install lang-javascript\n$ ./data/elasticsearch-2.3.4/bin/elasticsearch\n...\n\n\n\n\nNER API Server\n\n\n\u672c\u30b7\u30b9\u30c6\u30e0\u3067\u306f\u56fa\u6709\u8868\u73fe\u3092\u5916\u90e8\u306eAPI\u3092\u7528\u3044\u3066\u62bd\u51fa\u3092\u884c\u3046\u3053\u3068\u3067\u3001\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u306b\u7528\u3044\u308b\u30c4\u30fc\u30eb\u306e\u5909\u66f4\u3092\u5bb9\u6613\u306b\u3057\u3066\u3044\u307e\u3059\u3002\n\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u7528\u306eAPI\u304c\u6e80\u305f\u3059\u3079\u304d\u4ed5\u69d8\u306b\u3064\u3044\u3066\u306f\n\u3053\u3061\u3089\n\u3002\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b\n\n\n\u4e0a\u8a18\u306eAPI\u4ed5\u69d8\u3092\u6e80\u305f\u3059\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc (\nPlay NER Server\n) \u3092\u672c\u30b7\u30b9\u30c6\u30e0\u3068\u306f\u5225\u306b\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002\n\nPlay NER Server\n \u306e\u4f7f\u7528\u306b\u306f \nactivator\n \u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u304c\u5fc5\u8981\u3067\u3059\u3002\n\n\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n$ git clone https://github.com/sosuke-k/ner-play-server\n\n\n\n\nCRF \u30e2\u30c7\u30eb\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n$ cd ner-play-server\n$ wget -P ./data/ http://nlp.stanford.edu/software/stanford-ner-2015-12-09.zip\n$ unzip -d ./data/ ./data/stanford-ner-2015-12-09.zip\n$ cp -r ./data/stanford-ner-2015-12-09/classifiers/ ./apps/play/public/classifiers/\n\n\n\n\nPlay NER Server \u306e\u8d77\u52d5\n\n\n\u6700\u521d\u306fCRF\u30e2\u30c7\u30eb\u306e\u8aad\u307f\u8fbc\u307f\u306b\u5c11\u3057\u6642\u9593\u304c\u304b\u304b\u308a\u307e\u3059\u3002\n\n\n$ cd apps/play\n$ ./bin/activator run\n...\n--- (Running the application, auto-reloading is enabled) ---\n\n[info] p.c.s.NettyServer - Listening for HTTP on /0:0:0:0:0:0:0:0:9000\n\n(Server started, use Ctrl+D to stop and go back to the console...)\n\n\n\n\nrelretrieval\n\n\n\u74b0\u5883\u5909\u6570\u306e\u8ffd\u52a0\n\n\n\n\nELASTICSEARCH_URL\n : Elasticsearch \u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\n\n\nNER_API_URL\n : \u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc\u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\n\n\n\n\n\u74b0\u5883\u5909\u6570\u306e\u8a2d\u5b9a\u4f8b\uff1a\n\n\nexport ELASTICSEARCH_URL \nhttp://localhost:9200\n\nexport NER_API_URL \nhttp://localhost:9000\n\n\n\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\n\n\npip install relretrieval\n\n\n\n\n\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u306e\u521d\u671f\u5316\n\n\n$ python -m relretrieval --init True\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nInitializing ...\ndone\n\n\n\n\n\u8d77\u52d5\n\n\n$ python -m relretrieval\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nNER API ENDPOINT : http://localhost:9000\n * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)\n...\n\n\n\n\n\u7c21\u5358\u306a\u4f7f\u3044\u65b9\n\n\n\u6587\u3092\u4fdd\u5b58\n\n\narticle_id=1\n \u3067 \nI live in Japan.\n \u3092\u4fdd\u5b58\u3059\u308b\u4f8b\u3067\u3059\u3002\n\n\n$ curl --header \nContent-type: application/json\n --request POST --data '{\narticle_id\n: 1, \ntext\n:\nI live in Japan.\n}' http://localhost:5000/docs -s | jq\n{\n  \nstatus\n: \nok\n\n}", 
+            "text": "console.log(\"initialize mermaid\");\n  mermaid.initialize({startOnLoad:true});\n\n\n\n\u306f\u3058\u3081\u306b\n\n\n\u672c\u30b7\u30b9\u30c6\u30e0 (\nrelretrieval\n) \u3068\u5fc5\u8981\u3068\u306a\u308b\u95a2\u9023\u30b7\u30b9\u30c6\u30e0 (\nElasticsearch\n\u3001\nNER API Server\n) \u3001\u53ca\u3073\u305d\u308c\u3089\u3092\u5229\u7528\u3059\u308b\n\u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3\n\u306e\u95a2\u4fc2\u3092\u793a\u3057\u307e\u3059\u3002\n\n\n\n\n\ngraph TD\n    subgraph \"\"\n        app[fa:fa-user \u30a2\u30d7\u30ea\u30b1\u30fc\u30b7\u30e7\u30f3]\n    end\n    app -.-\n 3r\n    subgraph \u672c\u30b7\u30b9\u30c6\u30e0\u53ca\u3073\u95a2\u9023\u30b7\u30b9\u30c6\u30e0\n        3r[relretrieval]\n        es[fa:fa-database Elasticsearch]\n        ner[fa:fa-scissors NER API Server]\n        3r -.-\n es\n        3r -.-\n ner\n    end\n\n\n\n\n\n\u56f3\u306b\u793a\u3059\u3088\u3046\u306b\u672c\u30b7\u30b9\u30c6\u30e0\u306f\u3001\u30d0\u30c3\u30af\u30a8\u30f3\u30c9\u3067\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u3092\u3059\u308b\u305f\u3081\u306e\u30b5\u30fc\u30d0\u30fc\u3068\u3001\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066Elasticsearch\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\n\n\n\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\u3068\u30bb\u30c3\u30c8\u30a2\u30c3\u30d7\n\n\nElasticsearch\n\n\n\u30c7\u30fc\u30bf\u30d9\u30fc\u30b9\u3068\u3057\u3066\nElasticsearch\n\u3092\u5229\u7528\u3057\u307e\u3059\u3002\n\u3059\u3067\u306b\u8d77\u52d5\u3057\u3066\u3044\u308b\u5834\u5408\u306f\u5fc5\u8981\u3042\u308a\u307e\u305b\u3093\u304c\u3001\u4ee5\u4e0b\u306e\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u540d\u53ca\u3073\u30d7\u30e9\u30b0\u30a4\u30f3\u3092\u4f7f\u7528\u3057\u307e\u3059\u3002\n\n\n\n\n\u30a4\u30f3\u30c7\u30c3\u30af\u30b9 : \nrelretrieval\n\n\n\u30d7\u30e9\u30b0\u30a4\u30f3 : \nlang-javascript\n\n\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b\n\n\n$ mkdir ./data\n$ wget -P ./data/ https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/zip/elasticsearch/2.3.4/elasticsearch-2.3.4.zip\n$ unzip -d ./data/ ./data/elasticsearch-2.3.4.zip\n$ echo \nscript.inline: true\n \n ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ echo \nscript.indexed: true\n \n ./data/elasticsearch-2.3.4/config/elasticsearch.yml\n$ ./data/elasticsearch-2.3.4/bin/plugin install lang-javascript\n$ ./data/elasticsearch-2.3.4/bin/elasticsearch\n...\n\n\n\n\nNER API Server\n\n\n\u672c\u30b7\u30b9\u30c6\u30e0\u3067\u306f\u56fa\u6709\u8868\u73fe\u3092\u5916\u90e8\u306eAPI\u3092\u7528\u3044\u3066\u62bd\u51fa\u3092\u884c\u3046\u3053\u3068\u3067\u3001\u56fa\u6709\u8868\u73fe\u62bd\u51fa (NER) \u306b\u7528\u3044\u308b\u30c4\u30fc\u30eb\u306e\u5909\u66f4\u3092\u5bb9\u6613\u306b\u3057\u3066\u3044\u307e\u3059\u3002\n\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u7528\u306eAPI\u304c\u6e80\u305f\u3059\u3079\u304d\u4ed5\u69d8\u306b\u3064\u3044\u3066\u306f\n\u3053\u3061\u3089\n\u3002\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u4f8b\n\n\n\u4e0a\u8a18\u306eAPI\u4ed5\u69d8\u3092\u6e80\u305f\u3059\u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc (\nPlay NER Server\n) \u3092\u672c\u30b7\u30b9\u30c6\u30e0\u3068\u306f\u5225\u306b\u63d0\u4f9b\u3057\u3066\u3044\u307e\u3059\u3002\n\nPlay NER Server\n \u306e\u4f7f\u7528\u306b\u306f \nactivator\n \u306e\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u304c\u5fc5\u8981\u3067\u3059\u3002\n\n\n\u30bd\u30fc\u30b9\u30b3\u30fc\u30c9\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n$ git clone https://github.com/sosuke-k/ner-play-server\n\n\n\n\nCRF \u30e2\u30c7\u30eb\u306e\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9\n\n\n$ cd ner-play-server\n$ wget -P ./data/ http://nlp.stanford.edu/software/stanford-ner-2015-12-09.zip\n$ unzip -d ./data/ ./data/stanford-ner-2015-12-09.zip\n$ cp -r ./data/stanford-ner-2015-12-09/classifiers/ ./apps/play/public/classifiers/\n\n\n\n\nPlay NER Server \u306e\u8d77\u52d5\n\n\n\u6700\u521d\u306fCRF\u30e2\u30c7\u30eb\u306e\u8aad\u307f\u8fbc\u307f\u306b\u5c11\u3057\u6642\u9593\u304c\u304b\u304b\u308a\u307e\u3059\u3002\n\n\n$ cd apps/play\n$ ./bin/activator run\n...\n--- (Running the application, auto-reloading is enabled) ---\n\n[info] p.c.s.NettyServer - Listening for HTTP on /0:0:0:0:0:0:0:0:9000\n\n(Server started, use Ctrl+D to stop and go back to the console...)\n\n\n\n\nrelretrieval\n\n\n\u74b0\u5883\u5909\u6570\u306e\u8ffd\u52a0\n\n\n\n\nELASTICSEARCH_URL\n : Elasticsearch \u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\n\n\nNER_API_URL\n : \u56fa\u6709\u8868\u73fe\u62bd\u51fa\u30b5\u30fc\u30d0\u30fc\u306e\u30a8\u30f3\u30c9\u30dd\u30a4\u30f3\u30c8\n\n\n\n\n\u74b0\u5883\u5909\u6570\u306e\u8a2d\u5b9a\u4f8b\uff1a\n\n\nexport ELASTICSEARCH_URL \nhttp://localhost:9200\n\nexport NER_API_URL \nhttp://localhost:9000\n\n\n\n\n\n\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\n\n\npip install relretrieval\n\n\n\n\n\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u306e\u521d\u671f\u5316\n\n\n$ python -m relretrieval --init True\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nInitializing ...\ndone\n\n\n\n\n\u8d77\u52d5\n\n\n$ python -m relretrieval\nElasticsearch(2.3.4) ENDPOINT : http://localhost:9200\nNER API ENDPOINT : http://localhost:9000\n * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)\n...\n\n\n\n\n\u7c21\u5358\u306a\u4f7f\u3044\u65b9\n\n\n\u6587\u3092\u4fdd\u5b58\n\n\narticle_id=1\n \u3067 \nThe tech company Soundcloud is based in Berlin, capital of Germany.\n \u3092\u4fdd\u5b58\u3059\u308b\u4f8b\u3067\u3059\u3002\n\n\n$ url --header \nContent-type: application/json\n --request POST --data '{\narticle_id\n: 1, \ntext\n:\nThe tech company Soundcloud is based in Berlin, capital of Germany.\n}' http://localhost:5000/docs -s | jq\n{\n  \nstatus\n: \nok\n\n}\n\n\n\n\n\u5b66\u7fd2\u3092\u958b\u59cb\n\n\n$ curl --header \nContent-type: application/json\n --request POST --data '{\nmax_iter\n: 2}' http://localhost:5000/start -s | jq\n{\n  \nmessage\n: \nTraining begins\n,\n  \nstatus\n: \nok\n\n}\n\n\n\n\nrelation\n \u306e\u53d6\u5f97\n\n\ncurl http://localhost:5000/relations -s | jq\n{\n  \nclusters\n: [\n    {\n      \nid\n: \nAVoHVpws7qHvD9dVUw6Y\n,\n      \nrelations\n: [\n        {\n          \nAFT\n: \n.\n,\n          \nBEF\n: \nbased in\n,\n          \nBET\n: \n, capital of\n,\n          \ntuples\n: [\n            {\n              \nfirst\n: \nBerlin\n,\n              \nsecond\n: \nGermany\n\n            }\n          ]\n        },\n        {\n          \nAFT\n: \n, capital\n,\n          \nBEF\n: \ntech company\n,\n          \nBET\n: \nis based in\n,\n          \ntuples\n: [\n            {\n              \nfirst\n: \nSoundcloud\n,\n              \nsecond\n: \nBerlin\n\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}", 
             "title": "Get Started"
         }, 
         {
@@ -117,8 +122,18 @@
         }, 
         {
             "location": "/get_started/#_11", 
-            "text": "article_id=1  \u3067  I live in Japan.  \u3092\u4fdd\u5b58\u3059\u308b\u4f8b\u3067\u3059\u3002  $ curl --header  Content-type: application/json  --request POST --data '{ article_id : 1,  text : I live in Japan. }' http://localhost:5000/docs -s | jq\n{\n   status :  ok \n}", 
+            "text": "article_id=1  \u3067  The tech company Soundcloud is based in Berlin, capital of Germany.  \u3092\u4fdd\u5b58\u3059\u308b\u4f8b\u3067\u3059\u3002  $ url --header  Content-type: application/json  --request POST --data '{ article_id : 1,  text : The tech company Soundcloud is based in Berlin, capital of Germany. }' http://localhost:5000/docs -s | jq\n{\n   status :  ok \n}", 
             "title": "\u6587\u3092\u4fdd\u5b58"
+        }, 
+        {
+            "location": "/get_started/#_12", 
+            "text": "$ curl --header  Content-type: application/json  --request POST --data '{ max_iter : 2}' http://localhost:5000/start -s | jq\n{\n   message :  Training begins ,\n   status :  ok \n}", 
+            "title": "\u5b66\u7fd2\u3092\u958b\u59cb"
+        }, 
+        {
+            "location": "/get_started/#relation", 
+            "text": "curl http://localhost:5000/relations -s | jq\n{\n   clusters : [\n    {\n       id :  AVoHVpws7qHvD9dVUw6Y ,\n       relations : [\n        {\n           AFT :  . ,\n           BEF :  based in ,\n           BET :  , capital of ,\n           tuples : [\n            {\n               first :  Berlin ,\n               second :  Germany \n            }\n          ]\n        },\n        {\n           AFT :  , capital ,\n           BEF :  tech company ,\n           BET :  is based in ,\n           tuples : [\n            {\n               first :  Soundcloud ,\n               second :  Berlin \n            }\n          ]\n        }\n      ]\n    }\n  ]\n}", 
+            "title": "relation \u306e\u53d6\u5f97"
         }, 
         {
             "location": "/guides/", 
@@ -137,13 +152,28 @@
         }, 
         {
             "location": "/api/v0.0.1/", 
-            "text": "API References", 
-            "title": "3R API \u4ed5\u69d8"
+            "text": "relretrieval API References\n\n\nPOST /docs\n\n\nPost each documents\n\n\n\n\nContent-Type: \"application/json\"\n\n\n\n\nInclude the \ntext\n text in the body:\n\n\n{\n  \narticle_id\n: 1,\n  \ntext\n: \nThe tech company Soundcloud is based in Berlin, capital of Germany.\n\n}\n\n\n\n\n===\n\n\n\n\nStatus: \n200\n\n\nContent-Type: \"application/json; charset=UTF-8\"\n\n\n\n\n{\n  \nstatus\n: \nok\n\n}\n\n\n\n\nPOST /start\n\n\nStart BREADS iterations\n\n\n\n\nContent-Type: \"application/json\"\n\n\n\n\nInclude options:\n\n\n{\n  \nmax_iter\n: 10\n}\n\n\n\n\n===\n\n\n\n\nStatus: \n200\n\n\nContent-Type: \"application/json; charset=UTF-8\"\n\n\n\n\n{\n  \nstatus\n: \nok\n\n}\n\n\n\n\nGET /relations?query=CEO\n\n\nGets clusters including \"CEO\" as a relations word\n\n\n\n\nContent-Type: \"application/json\"\n\n\n\n\n===\n\n\n\n\nStatus: \n200\n\n\nContent-Type: \"application/json; charset=UTF-8\"\n\n\n\n\n{\n  \nclusters\n: [\n    {\n      \nrelations\n: [\n        {\n          \nBEF\n: \n,\n          \nBET\n: \nis CEO of\n,\n          \nAFT\n: \n,\n          \ntuples\n: [\n            {\n              \nfirst\n: \nLarry Page\n,\n              \nsecond\n: \nGoogle\n\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}", 
+            "title": "relretrieval API \u4ed5\u69d8"
         }, 
         {
-            "location": "/api/v0.0.1/#api-references", 
+            "location": "/api/v0.0.1/#relretrieval-api-references", 
             "text": "", 
-            "title": "API References"
+            "title": "relretrieval API References"
+        }, 
+        {
+            "location": "/api/v0.0.1/#post-docs", 
+            "text": "Post each documents   Content-Type: \"application/json\"   Include the  text  text in the body:  {\n   article_id : 1,\n   text :  The tech company Soundcloud is based in Berlin, capital of Germany. \n}  ===   Status:  200  Content-Type: \"application/json; charset=UTF-8\"   {\n   status :  ok \n}", 
+            "title": "POST /docs"
+        }, 
+        {
+            "location": "/api/v0.0.1/#post-start", 
+            "text": "Start BREADS iterations   Content-Type: \"application/json\"   Include options:  {\n   max_iter : 10\n}  ===   Status:  200  Content-Type: \"application/json; charset=UTF-8\"   {\n   status :  ok \n}", 
+            "title": "POST /start"
+        }, 
+        {
+            "location": "/api/v0.0.1/#get-relationsqueryceo", 
+            "text": "Gets clusters including \"CEO\" as a relations word   Content-Type: \"application/json\"   ===   Status:  200  Content-Type: \"application/json; charset=UTF-8\"   {\n   clusters : [\n    {\n       relations : [\n        {\n           BEF :  ,\n           BET :  is CEO of ,\n           AFT :  ,\n           tuples : [\n            {\n               first :  Larry Page ,\n               second :  Google \n            }\n          ]\n        }\n      ]\n    }\n  ]\n}", 
+            "title": "GET /relations?query=CEO"
         }, 
         {
             "location": "/api/ner_api/", 
@@ -157,27 +187,32 @@
         }, 
         {
             "location": "/resources/", 
-            "text": "Sentence Clustering Algorithm\n\n\nBREADs \u3068\u304b\u306e\u8efd\u3044\u7d39\u4ecb\n\n\nDatabase\n\n\nElasticsearch \u306e\u8efd\u3044\u7d39\u4ecb", 
+            "text": "Sentence Clustering Algorithm\n\n\n\n\n Semi-Supervised Bootstrapping of Relationship Extractors with Distributional Semantics\n\n\n\n\n\u4e0b\u8a18\u306e\u30b3\u30fc\u30c9\u3092\u4e00\u90e8\u5229\u7528\u3057\u3066\u3044\u307e\u3059\u3002\n\n\n\n\nhttps://github.com/davidsbatista/BREDS\n\n\n\n\nWeb Framework\n\n\n\n\nFlask\n\n\n\n\nDatabase\n\n\n\n\nElasticsearch", 
             "title": "Resources"
         }, 
         {
             "location": "/resources/#sentence-clustering-algorithm", 
-            "text": "BREADs \u3068\u304b\u306e\u8efd\u3044\u7d39\u4ecb", 
+            "text": "Semi-Supervised Bootstrapping of Relationship Extractors with Distributional Semantics   \u4e0b\u8a18\u306e\u30b3\u30fc\u30c9\u3092\u4e00\u90e8\u5229\u7528\u3057\u3066\u3044\u307e\u3059\u3002   https://github.com/davidsbatista/BREDS", 
             "title": "Sentence Clustering Algorithm"
         }, 
         {
+            "location": "/resources/#web-framework", 
+            "text": "Flask", 
+            "title": "Web Framework"
+        }, 
+        {
             "location": "/resources/#database", 
-            "text": "Elasticsearch \u306e\u8efd\u3044\u7d39\u4ecb", 
+            "text": "Elasticsearch", 
             "title": "Database"
         }, 
         {
             "location": "/versions/", 
-            "text": "Versions of relretrieval\n\n\nThese branches are available on this site.\n\n\n\n\nv0.0.1", 
+            "text": "Versions of relretrieval\n\n\nThese branches are available on this site.\n\n\n\n\nv0.0.3", 
             "title": "Versions"
         }, 
         {
             "location": "/versions/#versions-of-relretrieval", 
-            "text": "These branches are available on this site.   v0.0.1", 
+            "text": "These branches are available on this site.   v0.0.3", 
             "title": "Versions of relretrieval"
         }
     ]
